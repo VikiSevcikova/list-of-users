@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0
+}
+body{
+    position: relative;
+}
+#container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#container #list-wrapper{
+    display: grid;
+    grid-gap: 1rem;
+    margin: 1rem;
+    padding-bottom: 3rem;
+}
+
+#list-wrapper .card{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.493);
+}
+
+.card .avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.card .middle{
+    width: 70%;
+}
+
+.card .buttons{
+    width: 20%;
+}
+
+.buttons button{
+    margin: 0.2rem 0;
+}
+
+.show{
+    visibility: visible !important;
+}
+
+.is-blurred{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+#pop-up{
+    position: absolute;
+    visibility: hidden;
+    max-width: 450px;
+    max-height: 450px;
+    min-width: 215px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pop-up form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.493);  
+    background-color: #ffff;
+}
+#pop-up form .inputs{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#pop-up form input{
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+#pop-up form button{
+    width: 50%;
+}
+
+.add-btn{
+    position: fixed;
+    font-size: 2rem;
+    width: 3rem;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+    #list-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media screen and (min-width: 1150px) {
+    #list-wrapper {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
